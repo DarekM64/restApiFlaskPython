@@ -1,0 +1,15 @@
+build docker:
+docker build -t flask-smorest-api .
+
+start docker with on the fly change tracking (windows bash version):
+docker run -dp 5005:5000 -w //app -v "//$(pwd)://app" flask-smorest-api
+
+install requirements
+pip install -r requirements.txt
+
+
+
+
+flask db init
+flask db migrate
+flask db upgrade
