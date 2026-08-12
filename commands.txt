@@ -17,3 +17,13 @@ flask db upgrade
 
 git status
 git commit -a   
+
+git checkout somwhere
+
+git checkout main   - go to back to the main branch
+git branche new_branch - create new branch
+
+
+
+git checkout main
+git merge new_branch
