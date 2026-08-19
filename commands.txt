@@ -4,6 +4,9 @@ docker build -t flask-smorest-api .
 start docker with on the fly change tracking (windows bash version):
 docker run -dp 5005:5000 -w //app -v "//$(pwd)://app" flask-smorest-api
 
+start worker
+docker run -w /app flask-smorest-api sh -c "rq worker -u [REDIS_URL] emails"
+
 install requirements
 pip install -r requirements.txt
 
